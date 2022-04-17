@@ -6242,7 +6242,7 @@ button::-moz-focus-inner {
     font-family: euclid;
     font-style: normal;
     font-weight: 700;
-    src: url(/files/EuclidCircularB-Bold-WebXL.ttf) format("truetype")
+    src: url(./files/EuclidCircularB-Bold-WebXL.ttf) format("truetype")
 }
 
 * {
@@ -18999,7 +18999,7 @@ input.form-control--error {
     font-family: euclid;
     font-style: normal;
     font-weight: 700;
-    src: url(/files/EuclidCircularB-Bold-WebXL.ttf) format("truetype")
+    src: url(./files/EuclidCircularB-Bold-WebXL.ttf) format("truetype")
 }
 
 .box--padding-0 {
@@ -26665,7 +26665,7 @@ input[type=submit][disabled] {
     font-family: euclid;
     font-style: normal;
     font-weight: 700;
-    src: url(/files/EuclidCircularB-Bold-WebXL.ttf) format("truetype")
+    src: url(./files/EuclidCircularB-Bold-WebXL.ttf) format("truetype")
 }
 
 .chip {
@@ -32946,7 +32946,7 @@ input[type=submit][disabled] {
     font-family: euclid;
     font-style: normal;
     font-weight: 700;
-    src: url(/files/EuclidCircularB-Bold-WebXL.ttf) format("truetype")
+    src: url(./files/EuclidCircularB-Bold-WebXL.ttf) format("truetype")
 }
 
 .color-indicator {
@@ -41389,7 +41389,7 @@ input[type=submit][disabled] {
     font-family: euclid;
     font-style: normal;
     font-weight: 700;
-    src: url(/files/EuclidCircularB-Bold-WebXL.ttf) format("truetype")
+    src: url(./files/EuclidCircularB-Bold-WebXL.ttf) format("truetype")
 }
 
 .typography {
